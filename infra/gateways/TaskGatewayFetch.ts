@@ -7,6 +7,7 @@ export const getAllTasks: GetAllTask = async () => {
     headers: {
       "Content-Type": "application/json",
     },
+    cache: "no-cache"
   });
   const tasksResponseData = await response.json();
   const allTasks:Task[]=[]
