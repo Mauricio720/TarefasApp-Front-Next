@@ -1,4 +1,4 @@
-import { getAllTasks } from "@/infra/TaskGatewayFetch";
+import { getAllTasks } from "@/infra/gateways/TaskGatewayFetch";
 import HomePage from "@/ui/components/template/pages/HomePage";
 
 export default async function Home() {
