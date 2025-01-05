@@ -15,4 +15,4 @@ RUN if [ "$NODE_ENV" = "production" ]; then npm run build; fi
 EXPOSE 3000
 
 # O comando será definido pelo docker-compose
-CMD ["sh", "-c", "npm run dev"]
+CMD ["sh", "-c", "npm run start"]
