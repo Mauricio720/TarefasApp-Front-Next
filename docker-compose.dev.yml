@@ -1,0 +1,25 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NODE_ENV: development
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      NEXT_PUBLIC_API_URL: "http://task-api:3333"
+    networks:
+      - app-task-network
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run dev
+  
+networks:
+  app-task-network:
+    driver: bridge
+    name: app-task-network
+
+
